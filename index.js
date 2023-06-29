@@ -34,6 +34,7 @@ async function run() {
     // Collections
     const studentsCollection = client.db("my-client").collection("students");
     const usersCollection = client.db("my-client").collection("users");
+    const galleryCollection = client.db("my-client").collection("gallery");
 
     // Students APIs
     app.post("/students", async (req, res) => {
@@ -118,6 +119,13 @@ async function run() {
         $set: { role: "admin" },
       };
       const result = await usersCollection.updateOne(filter, updateDoc);
+      res.send(result);
+    });
+
+    // Gallery APIs
+    app.post("/gallery", async (req, res) => {
+      const gallery = req.body;
+      const result = await galleryCollection.insertOne(gallery);
       res.send(result);
     });
 
