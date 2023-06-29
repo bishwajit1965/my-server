@@ -1,0 +1,92 @@
+[
+  {
+    "name": "John Smith",
+    "id": "101",
+    "class": "10A",
+    "subject": "Mathematics",
+    "email": "john.smith@example.com",
+    "phone": "1234567890",
+    "address": "123 Main Street, City"
+  },
+  {
+    "name": "Jane Doe",
+    "id": "102",
+    "class": "10B",
+    "subject": "Science",
+    "email": "jane.doe@example.com",
+    "phone": "9876543210",
+    "address": "456 Elm Street, Town"
+  },
+  {
+    "name": "Michael Johnson",
+    "id": "103",
+    "class": "10A",
+    "subject": "English",
+    "email": "michael.johnson@example.com",
+    "phone": "5555555555",
+    "address": "789 Oak Street, City"
+  },
+  {
+    "name": "Emily Wilson",
+    "id": "104",
+    "class": "10C",
+    "subject": "History",
+    "email": "emily.wilson@example.com",
+    "phone": "1112223333",
+    "address": "321 Pine Street, Town"
+  },
+  {
+    "name": "David Lee",
+    "id": "105",
+    "class": "10B",
+    "subject": "Physics",
+    "email": "david.lee@example.com",
+    "phone": "7778889999",
+    "address": "543 Maple Street, City"
+  },
+  {
+    "name": "Olivia Brown",
+    "id": "106",
+    "class": "10A",
+    "subject": "Chemistry",
+    "email": "olivia.brown@example.com",
+    "phone": "4445556666",
+    "address": "987 Cedar Street, Town"
+  },
+  {
+    "name": "James Anderson",
+    "id": "107",
+    "class": "10C",
+    "subject": "Geography",
+    "email": "james.anderson@example.com",
+    "phone": "9990001111",
+    "address": "654 Birch Street, City"
+  },
+  {
+    "name": "Sophia Martinez",
+    "id": "108",
+    "class": "10B",
+    "subject": "Biology",
+    "email": "sophia.martinez@example.com",
+    "phone": "2223334444",
+    "address": "876 Willow Street, Town"
+  },
+  {
+    "name": "Daniel Taylor",
+    "id": "109",
+    "class": "10A",
+    "subject": "Computer Science",
+    "email": "daniel.taylor@example.com",
+    "phone": "8889990000",
+    "address": "234 Oak Lane, City"
+  },
+  {
+    "name": "Isabella Hernandez",
+    "id": "110",
+    "class": "10C",
+    "subject": "Art",
+    "email": "isabella.hernandez@example.com",
+    "phone": "6667778888",
+    "address": "567 Elm Lane, Town"
+  }
+]
