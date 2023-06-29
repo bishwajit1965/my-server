@@ -129,6 +129,44 @@ async function run() {
       res.send(result);
     });
 
+    app.get("/gallery", async (req, res) => {
+      const result = await galleryCollection.find().toArray();
+      res.send(result);
+    });
+
+    app.get("/gallery/:id", async (req, res) => {
+      const id = req.params.id;
+      const filter = { _id: new ObjectId(id) };
+      const result = await galleryCollection.findOne(filter);
+      res.send(result);
+    });
+
+    app.put("/gallery/:id", async (req, res) => {
+      const id = req.params.id;
+      const filter = { _id: new ObjectId(id) };
+      const updatedDoc = req.body;
+      const options = { upsert: true };
+      const galleryImageData = {
+        $set: {
+          name: updatedDoc.name,
+          photoUrl: updatedDoc.photoUrl,
+        },
+      };
+      const result = await galleryCollection.updateOne(
+        filter,
+        galleryImageData,
+        options
+      );
+      res.send(result);
+    });
+
+    app.delete("/gallery/:id", async (req, res) => {
+      const id = req.params.id;
+      const filter = { _id: new ObjectId(id) };
+      const result = await galleryCollection.deleteOne(filter);
+      res.send(result);
+    });
+
     /**=============================
      * Code above
     ================================*/
