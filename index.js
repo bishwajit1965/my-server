@@ -44,8 +44,16 @@ async function run() {
     });
 
     app.get("/students", async (req, res) => {
-      const result = await studentsCollection.find().toArray();
-      res.send(result);
+      const page = parseInt(req.query.page);
+      const size = parseInt(req.query.size);
+      const query = {};
+      const cursor = studentsCollection.find(query);
+      const students = await cursor
+        .skip(page * size)
+        .limit(size)
+        .toArray();
+      const count = await studentsCollection.estimatedDocumentCount();
+      res.send({ count, students });
     });
 
     app.get("/students/:id", async (req, res) => {
